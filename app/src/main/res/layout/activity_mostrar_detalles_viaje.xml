@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MostrarDetallesViajeActivity">
+
+    <TextView
+        android:id="@+id/txt_detalles_precio"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="36dp"
+        android:text="PRECIO"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="@+id/txt_detalles_destino"
+        app:layout_constraintStart_toStartOf="@+id/txt_detalles_destino"
+        app:layout_constraintTop_toBottomOf="@+id/txt_detalles_destino" />
+
+    <TextView
+        android:id="@+id/txt_detalles_idviaje"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="104dp"
+        android:text="IDVIAJE"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/txt_detalles_origen"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:text="ORIGEN"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="@+id/txt_detalles_idviaje"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/txt_detalles_idviaje"
+        app:layout_constraintTop_toBottomOf="@+id/txt_detalles_idviaje" />
+
+    <TextView
+        android:id="@+id/txt_detalles_destino"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="44dp"
+        android:text="DESTINO"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="@+id/txt_detalles_origen"
+        app:layout_constraintHorizontal_bias="0.461"
+        app:layout_constraintStart_toStartOf="@+id/txt_detalles_origen"
+        app:layout_constraintTop_toBottomOf="@+id/txt_detalles_origen" />
+
+    <ImageView
+        android:id="@+id/img_detalles_foto"
+        android:layout_width="232dp"
+        android:layout_height="175dp"
+        android:layout_marginTop="40dp"
+        app:layout_constraintEnd_toEndOf="@+id/txt_detalles_precio"
+        app:layout_constraintStart_toStartOf="@+id/txt_detalles_precio"
+        app:layout_constraintTop_toBottomOf="@+id/txt_detalles_precio"
+        app:srcCompat="@drawable/foto_viaje2" />
+</androidx.constraintlayout.widget.ConstraintLayout>

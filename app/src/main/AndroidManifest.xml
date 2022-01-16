@@ -12,6 +12,12 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Viajes">
         <activity
+            android:name=".MostrarDetallesViajeActivity"
+            android:exported="false" />
+        <activity
+            android:name=".mostrarViaje"
+            android:exported="false" />
+        <activity
             android:name=".AddViajeActivity"
             android:exported="false" />
         <activity

@@ -5,4 +5,9 @@
     <string name="destino">Destino</string>
     <string name="precio">Precio</string>
     <string name="insertar_viaje">Insertar Viaje</string>
+    <string name="todo">TODO</string>
+    <string name="cambiar_n_imagen">Cambiar \n Imagen</string>
+    <string name="mostrar_viajes">Mostrar Viajes</string>
+    <string name="identificador_viaje">identificador viaje</string>
+    <string name="foto_estudiante">foto estudiante</string>
 </resources>

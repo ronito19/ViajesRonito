@@ -7,12 +7,23 @@
     tools:context=".MainActivity">
 
     <Button
+        android:id="@+id/bt_mostrar_viaje"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="36dp"
+        android:onClick="mostrarViaje"
+        android:text="@string/mostrar_viajes"
+        app:layout_constraintEnd_toEndOf="@+id/bt_addviaje"
+        app:layout_constraintStart_toStartOf="@+id/bt_addviaje"
+        app:layout_constraintTop_toBottomOf="@+id/bt_addviaje" />
+
+    <Button
         android:id="@+id/bt_addviaje"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="84dp"
-        android:text="@string/addviaje"
         android:onClick="addviaje1"
+        android:text="@string/addviaje"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"

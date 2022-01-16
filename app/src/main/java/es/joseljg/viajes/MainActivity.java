@@ -18,4 +18,9 @@ public class MainActivity extends AppCompatActivity {
         Intent intent = new Intent(this,AddViajeActivity.class);
         startActivity(intent);
     }
+
+    public void mostrarViaje(View view) {
+        Intent intent = new Intent(this,mostrarViaje.class);
+        startActivity(intent);
+    }
 }
