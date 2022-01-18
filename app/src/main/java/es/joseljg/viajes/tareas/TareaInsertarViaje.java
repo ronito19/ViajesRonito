@@ -6,15 +6,20 @@ import es.joseljg.viajes.clases.Viaje;
 import es.joseljg.viajes.modelos.ViajeDB;
 
 
-public class TareaInsertarViaje implements Callable<Boolean> {
+public class TareaInsertarViaje implements Callable<Boolean>
+{
     private Viaje v;
 
-    public TareaInsertarViaje(Viaje v) {
+
+    public TareaInsertarViaje(Viaje v)
+    {
         this.v = v;
     }
 
+
     @Override
-    public Boolean call() throws Exception {
+    public Boolean call() throws Exception
+    {
         boolean insercionOK = ViajeDB.insertarViaje(this.v);
         return insercionOK;
     }

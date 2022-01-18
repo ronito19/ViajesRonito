@@ -12,6 +12,7 @@ public class ConfiguracionDB {
     public static final String CLAVEDB = "1234";
     public static final int ANCHO_IMAGENES_BITMAP = 100;
     public static final int ALTO_IMAGENES_BITMAP = 100;
+    public static final int NUMERO_DE_COLUMNAS = 3;
     private static final String OPCIONESHORA = "?useUnicode=true&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=UTC";
     // las opciones de hora tambien las puedes poner en mysql
     // SET GLOBAL time_zone = '+1:00';

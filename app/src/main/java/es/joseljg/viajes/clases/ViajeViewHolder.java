@@ -16,7 +16,8 @@ import java.util.ArrayList;
 import es.joseljg.viajes.MostrarDetallesViajeActivity;
 import es.joseljg.viajes.R;
 
-public class ViajeViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener{
+public class ViajeViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener
+{
 
     public static final String EXTRA_OBJETO_VIAJE =  "es.joseljg.viajeViewHolder.objeto_viaje";
     public static final String EXTRA_OBJETO_IMG_VIAJE =  "es.joseljg.viajeViewHolder.img_viaje";
@@ -26,7 +27,8 @@ public class ViajeViewHolder extends RecyclerView.ViewHolder implements View.OnC
     public ImageView img_rv_viaje_foto = null;
     ListaViajesAdapter lcAdapter;
 
-    public ViajeViewHolder(@NonNull View itemView, ListaViajesAdapter lcAdapter) {
+    public ViajeViewHolder(@NonNull View itemView, ListaViajesAdapter lcAdapter)
+    {
         super(itemView);
         txt_rv_viaje_idviaje = (TextView)  itemView.findViewById(R.id.txt_rv_viaje_idviaje);
         txt_rv_viaje_origen = (TextView)  itemView.findViewById(R.id.txt_rv_viaje_origen);
@@ -38,7 +40,8 @@ public class ViajeViewHolder extends RecyclerView.ViewHolder implements View.OnC
     }
 
     @Override
-    public void onClick(View view) {
+    public void onClick(View view)
+    {
         int mPosition = getAdapterPosition();
         // int mPosition = getLayoutPosition();
         ArrayList<Viaje> cursos = this.lcAdapter.getListaViajes();
@@ -46,7 +49,8 @@ public class ViajeViewHolder extends RecyclerView.ViewHolder implements View.OnC
         Intent intent = new Intent(lcAdapter.getC(), MostrarDetallesViajeActivity.class);
         Bitmap fotov = viaje.getFoto();
         Viaje viaje1 = new Viaje(viaje.getIdviaje(), viaje.getOrigen(), viaje.getDestino(), viaje.getPrecio(), null);
-        if(fotov != null) {
+        if(fotov != null)
+        {
             byte[] fotob = bitmap_to_bytes(fotov);
             intent.putExtra(EXTRA_OBJETO_IMG_VIAJE, fotob);
         }

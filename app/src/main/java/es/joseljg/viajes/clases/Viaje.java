@@ -11,7 +11,7 @@ public class Viaje implements Serializable {
     private String destino;
     private double precio;
     private Bitmap foto;
-    //---------------------------------------
+    //--------------------------------------------------------------------------
 
     public Viaje(String origen, String destino, double precio) {
         this.idviaje = 0;
@@ -28,6 +28,7 @@ public class Viaje implements Serializable {
         this.precio = precio;
         this.foto = foto;
     }
+
     public Viaje(int idviaje,String origen, String destino, double precio, Bitmap foto) {
         this.idviaje = idviaje;
         this.origen = origen;
@@ -60,6 +61,7 @@ public class Viaje implements Serializable {
         this.precio = precio;
     }
 
+
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
@@ -67,6 +69,7 @@ public class Viaje implements Serializable {
         Viaje viaje = (Viaje) o;
         return idviaje == viaje.idviaje;
     }
+
 
     public int getIdviaje() {
         return idviaje;
@@ -84,10 +87,12 @@ public class Viaje implements Serializable {
         this.foto = foto;
     }
 
+
     @Override
     public int hashCode() {
         return Objects.hash(idviaje);
     }
+
 
     @Override
     public String toString() {

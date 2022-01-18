@@ -45,9 +45,10 @@ public class ViajeDB {
             else {
                 return false;
             }
-        } catch (SQLException e) {
-            return false;
-        }
+        } catch (SQLException e)
+            {
+                return false;
+            }
     }
 
     public static ArrayList<Viaje> obtenerViajes() {
@@ -57,7 +58,8 @@ public class ViajeDB {
             return null;
         }
         ArrayList<Viaje> viajes = new ArrayList<Viaje>();
-        try {
+        try
+        {
             Statement sentencia = conexion.createStatement();
             String ordenSQL = "SELECT * FROM viajes ORDER BY idviaje";
             ResultSet resultado = sentencia.executeQuery(ordenSQL);
@@ -70,11 +72,13 @@ public class ViajeDB {
                 Blob foto = resultado.getBlob("foto");
                 Bitmap bm_foto;
                 Viaje v ;
-                if(foto != null){
+                if(foto != null)
+                {
                     bm_foto = ImagenesBlobBitmap.blob_to_bitmap(foto, ConfiguracionDB.ANCHO_IMAGENES_BITMAP, ConfiguracionDB.ALTO_IMAGENES_BITMAP);
                     v = new Viaje(idviaje, origen, destino, precio, bm_foto);
                 }
-                else{
+                else
+                    {
                     v = new Viaje(idviaje, origen, destino, precio, null);
                 }
                 viajes.add(v);
@@ -83,9 +87,10 @@ public class ViajeDB {
             sentencia.close();
             conexion.close();
             return viajes;
-        } catch (SQLException e) {
-            Log.i("sql", "error sql");
-            return viajes;
-        }
+        } catch (SQLException e)
+            {
+                Log.i("sql", "error sql");
+                return viajes;
+            }
     }
 }
