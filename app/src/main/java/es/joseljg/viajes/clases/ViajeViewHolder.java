@@ -45,13 +45,13 @@ public class ViajeViewHolder extends RecyclerView.ViewHolder implements View.OnC
         Viaje viaje = cursos.get(mPosition);
         Intent intent = new Intent(lcAdapter.getC(), MostrarDetallesViajeActivity.class);
         Bitmap fotov = viaje.getFoto();
+        Viaje viaje1 = new Viaje(viaje.getIdviaje(), viaje.getOrigen(), viaje.getDestino(), viaje.getPrecio(), null);
         if(fotov != null) {
             byte[] fotob = bitmap_to_bytes(fotov);
-            viaje.setFoto(null);
             intent.putExtra(EXTRA_OBJETO_IMG_VIAJE, fotob);
         }
         // lcAdapter.notifyDataSetChanged();
-          intent.putExtra(EXTRA_OBJETO_VIAJE, viaje);
-          lcAdapter.getC().startActivity(intent);
+        intent.putExtra(EXTRA_OBJETO_VIAJE, viaje1);
+        lcAdapter.getC().startActivity(intent);
     }
 }
